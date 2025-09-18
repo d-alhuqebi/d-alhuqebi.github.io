@@ -11,6 +11,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { Calculator, Phone, Mail, MapPin, Users, Award, FileText, TrendingUp, Menu, X, MessageCircle, Printer, ArrowLeft } from "lucide-react";
 import ServiceDetail from './ServiceDetail';
+import ServicePages from './ServicePages';
 
 // استيراد الصور - Import images
 import aboutOfficeImage from '@/assets/about-office.jpg';
@@ -19,6 +20,12 @@ import serviceTaxImage from '@/assets/service-tax.jpg';
 import serviceFeasibilityImage from '@/assets/service-feasibility.jpg';
 import serviceSystemsImage from '@/assets/service-systems.jpg';
 import teamMeetingImage from '@/assets/team-meeting.jpg';
+import heroBackground from '@/assets/hero-background.jpg';
+import financialConsultingImage from '@/assets/financial-consulting.jpg';
+import accountingSoftwareImage from '@/assets/accounting-software.jpg';
+import accountingTeamImage from '@/assets/accounting-team.jpg';
+import calculatorBgImage from '@/assets/calculator-bg.jpg';
+import contactBgImage from '@/assets/contact-bg.jpg';
 
 const AccountingWebsite = () => {
   const [activeTab, setActiveTab] = useState("home");
@@ -192,6 +199,21 @@ const AccountingWebsite = () => {
 
 نوفر برامج تدريبية شاملة ومتخصصة للموظفين لضمان الاستفادة القصوى من الأنظمة الجديدة، مع تقديم الدعم الفني المستمر وخدمات الصيانة الدورية لضمان استمرارية العمل بكفاءة عالية ودون انقطاع.`,
       image: serviceSystemsImage
+    },
+    {
+      title: "استشارات مالية متقدمة",
+      tagline: "خدمات استشارية متخصصة في التمويل والاستثمار وإدارة المحافظ",
+      benefits: [
+        "إدارة محافظ استثمارية متنوعة تحقق أفضل العوائد المالية",
+        "تخطيط مالي شخصي ومؤسسي لتحقيق الأهداف طويلة المدى",
+        "استشارات التمويل والحصول على أفضل شروط القروض والتمويل"
+      ],
+      description: `الاستشارات المالية المتقدمة تهدف إلى مساعدة العملاء في بناء ثروات مستدامة وتحقيق أهدافهم المالية طويلة المدى. نقدم خدمات إدارة المحافظ الاستثمارية وتطوير استراتيجيات مالية مخصصة تناسب احتياجات كل عميل.
+
+فريق الخبراء لدينا يقوم بتحليل الوضع المالي الحالي ووضع خطط مالية شاملة تتضمن الادخار والاستثمار والتخطيط للتقاعد. نساعد في اختيار أفضل الأدوات الاستثمارية وتوزيع المخاطر بطريقة متوازنة.
+
+كما نوفر استشارات متخصصة في التمويل ومساعدة الشركات والأفراد في الحصول على أفضل شروط القروض والتمويل من البنوك والمؤسسات المالية، مع إعداد ملفات القروض وهيكلة الديون بطريقة مثلى.`,
+      image: financialConsultingImage
     }
   ];
 
@@ -269,41 +291,74 @@ const AccountingWebsite = () => {
           {/* الصفحة الرئيسية - Home Page */}
           <TabsContent value="home" className="space-y-12">
             {/* القسم الرئيسي - Hero Section */}
-            <section className="text-center py-16 bg-gradient-accent rounded-2xl shadow-brand-strong">
-              <div className="max-w-4xl mx-auto text-white px-6">
-                <h2 className="text-4xl md:text-6xl font-bold mb-6">
+            <section className="relative text-center py-20 overflow-hidden rounded-3xl shadow-2xl">
+              {/* صورة الخلفية */}
+              <div className="absolute inset-0">
+                <img 
+                  src={heroBackground} 
+                  alt="مكتب محاسبة متخصص"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/90 to-brand-secondary/90"></div>
+              </div>
+              
+              <div className="relative max-w-5xl mx-auto text-white px-6 z-10">
+                <h2 className="text-4xl md:text-7xl font-bold mb-8 animate-fade-in">
                   مكتب محاسبة متخصص
                 </h2>
-                <p className="text-xl md:text-2xl mb-8 opacity-90">
-                  خدمات محاسبية واستشارية شاملة بخبرة تزيد عن 15 عام
+                <p className="text-xl md:text-3xl mb-10 opacity-95 leading-relaxed animate-fade-in">
+                  خدمات محاسبية واستشارية شاملة بخبرة تزيد عن 15 عاماً
                 </p>
-                <div className="flex flex-wrap justify-center gap-4 mb-8">
-                  <Badge variant="secondary" className="text-lg py-2 px-4 bg-white/20 text-white border-white/30">
+                <div className="flex flex-wrap justify-center gap-4 mb-10">
+                  <Badge variant="secondary" className="text-lg py-3 px-6 bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                    <Award className="ml-2 h-5 w-5" />
                     مراجعة وتدقيق
                   </Badge>
-                  <Badge variant="secondary" className="text-lg py-2 px-4 bg-white/20 text-white border-white/30">
+                  <Badge variant="secondary" className="text-lg py-3 px-6 bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                    <Calculator className="ml-2 h-5 w-5" />
                     استشارات ضريبية
                   </Badge>
-                  <Badge variant="secondary" className="text-lg py-2 px-4 bg-white/20 text-white border-white/30">
+                  <Badge variant="secondary" className="text-lg py-3 px-6 bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                    <TrendingUp className="ml-2 h-5 w-5" />
                     دراسات جدوى
                   </Badge>
+                  <Badge variant="secondary" className="text-lg py-3 px-6 bg-white/20 text-white border-white/30 backdrop-blur-sm">
+                    <Users className="ml-2 h-5 w-5" />
+                    أنظمة مالية
+                  </Badge>
                 </div>
-                <Button 
-                  size="lg" 
-                  variant="secondary"
-                  onClick={() => setIsContactOpen(true)}
-                  className="text-lg px-8 py-4 bg-white text-brand-primary hover:bg-white/90 transition-brand"
-                >
-                  تواصل معنا الآن
-                  <Phone className="mr-2 h-5 w-5" />
-                </Button>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button 
+                    size="lg" 
+                    variant="secondary"
+                    onClick={() => setIsContactOpen(true)}
+                    className="text-lg px-10 py-4 bg-white text-brand-primary hover:bg-white/90 transition-brand hover:scale-105"
+                  >
+                    تواصل معنا الآن
+                    <Phone className="mr-2 h-5 w-5" />
+                  </Button>
+                  <Button 
+                    size="lg" 
+                    variant="outline"
+                    onClick={() => setActiveTab("services")}
+                    className="text-lg px-10 py-4 text-white border-white hover:bg-white hover:text-brand-primary transition-brand hover:scale-105"
+                  >
+                    استكشف خدماتنا
+                    <FileText className="mr-2 h-5 w-5" />
+                  </Button>
+                </div>
               </div>
             </section>
 
             {/* نظرة عامة على الخدمات - Services Overview */}
-            <section>
-              <h3 className="text-3xl font-bold text-center mb-12 text-brand-dark">خدماتنا المتخصصة</h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <section className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 md:p-12">
+              <div className="text-center mb-12">
+                <h3 className="text-4xl md:text-5xl font-bold mb-4 text-brand-dark">خدماتنا المتخصصة</h3>
+                <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                  نقدم مجموعة شاملة من الخدمات المحاسبية والاستشارية المتخصصة لمساعدة الشركات على تحقيق أهدافها المالية
+                </p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
                 {services.map((service, index) => (
                   <Card 
                     key={index} 
@@ -418,14 +473,25 @@ const AccountingWebsite = () => {
 
           {/* الخدمات - Services Page */}
           <TabsContent value="services" className="space-y-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-brand-dark mb-4">خدماتنا المتخصصة</h2>
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                نقدم مجموعة شاملة من الخدمات المحاسبية والاستشارية المتخصصة
-              </p>
-            </div>
-            
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            {selectedServiceDetail !== null ? (
+              <ServicePages
+                serviceId={selectedServiceDetail + 1}
+                onBack={() => setSelectedServiceDetail(null)}
+                onContactClick={(serviceName) => {
+                  setSelectedService(serviceName);
+                  setIsContactOpen(true);
+                }}
+              />
+            ) : (
+              <>
+                <div className="text-center mb-12">
+                  <h2 className="text-4xl font-bold text-brand-dark mb-4">خدماتنا المتخصصة</h2>
+                  <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                    نقدم مجموعة شاملة من الخدمات المحاسبية والاستشارية المتخصصة
+                  </p>
+                </div>
+                
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {services.map((service, index) => (
                 <Card key={index} className="shadow-brand-medium hover:shadow-brand-strong transition-brand">
                   <CardHeader>
@@ -456,20 +522,32 @@ const AccountingWebsite = () => {
                       </div>
                     </div>
                     
-                    <Button 
-                      className="w-full bg-gradient-brand hover:opacity-90 transition-brand"
-                      onClick={() => {
-                        setSelectedService(service.title);
-                        setIsContactOpen(true);
-                      }}
-                    >
-                      اطلب استشارة في {service.title}
-                      <Phone className="mr-2 h-4 w-4" />
-                    </Button>
+                    <div className="flex gap-3">
+                      <Button 
+                        className="flex-1 bg-gradient-brand hover:opacity-90 transition-brand"
+                        onClick={() => setSelectedServiceDetail(index)}
+                      >
+                        تفاصيل أكثر
+                        <FileText className="mr-2 h-4 w-4" />
+                      </Button>
+                      <Button 
+                        variant="outline"
+                        className="flex-1 hover:bg-brand-primary hover:text-white transition-brand"
+                        onClick={() => {
+                          setSelectedService(service.title);
+                          setIsContactOpen(true);
+                        }}
+                      >
+                        اطلب استشارة
+                        <MessageCircle className="mr-2 h-4 w-4" />
+                      </Button>
+                    </div>
                   </CardContent>
                 </Card>
               ))}
             </div>
+              </>
+            )}
           </TabsContent>
 
           {/* الحاسبات - Calculator Page */}
