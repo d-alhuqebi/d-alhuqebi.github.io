@@ -1,22 +1,21 @@
-# Welcome to your Lovable project
+# Welcome to Abdullah Alhuqebi's Project
 
 ## Project info
 
-**URL**: https://lovable.dev/projects/1762fc1f-595b-4185-b2f1-5a890be7fd64
+**Developer**: Abdullah Alhuqebi
+**Portfolio**: https://saad.alhuqebi.com
 
 ## How can I edit this code?
 
 There are several ways of editing your application.
 
-**Use Lovable**
+**About Abdullah Alhuqebi**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/1762fc1f-595b-4185-b2f1-5a890be7fd64) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
+Abdullah Alhuqebi is a developer and accountant. For more information, visit [saad.alhuqebi.com](https://saad.alhuqebi.com).
 
 **Use your preferred IDE**
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in the live site.
 
 The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
@@ -62,12 +61,12 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/1762fc1f-595b-4185-b2f1-5a890be7fd64) and click on Share -> Publish.
+Simply build the project and push to the main branch. The site will be published at [saad.alhuqebi.com](https://saad.alhuqebi.com).
 
-## Can I connect a custom domain to my Lovable project?
+## Can I connect a custom domain?
 
 Yes, you can!
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+To connect a domain, configure your DNS to point to GitHub Pages and set the custom domain in your repository settings.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Read more here: [GitHub Pages Custom Domains](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
