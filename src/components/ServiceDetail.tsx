@@ -56,7 +56,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service, onBack, onContac
             <CardContent>
               <div className="prose prose-lg max-w-none space-y-4 text-gray-700 leading-relaxed">
                 {service.description.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="text-lg">{paragraph}</p>
+                  <p key={index}>{paragraph}</p>
                 ))}
               </div>
             </CardContent>
