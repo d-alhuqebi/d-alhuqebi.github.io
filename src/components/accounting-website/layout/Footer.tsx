@@ -6,10 +6,10 @@ export function Footer() {
   return (
     <footer className="bg-brand-dark text-white py-12 md:py-16 no-print">
       <div className="container mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
           
           {/* Contact Info */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <h3 className="text-2xl font-bold mb-4 text-brand-primary">عبدالرقيب عبدالله</h3>
             <p className="text-white/80 leading-relaxed mb-4">
               مكتب محاسبة واستشارات مالية معتمد يقدم خدمات متخصصة للشركات والمؤسسات.
@@ -35,7 +35,7 @@ export function Footer() {
           </div>
           
           {/* Location Map */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-1">
             <h3 className="text-xl font-bold mb-4">موقعنا</h3>
             <div className="rounded-lg overflow-hidden shadow-lg h-64">
               <iframe 

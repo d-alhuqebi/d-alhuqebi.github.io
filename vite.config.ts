@@ -15,4 +15,17 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    chunkSizeWarningLimit: 1000,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'react': ['react', 'react-dom'],
+          'lucide': ['lucide-react'],
+          'framer': ['framer-motion'],
+          'radix': ['@radix-ui/react-accordion', '@radix-ui/react-dialog', '@radix-ui/react-dropdown-menu', '@radix-ui/react-tabs', '@radix-ui/react-toast', '@radix-ui/react-tooltip']
+        }
+      }
+    }
+  }
 }));
